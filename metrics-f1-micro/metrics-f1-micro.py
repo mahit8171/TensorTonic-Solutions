@@ -12,8 +12,13 @@ def f1_micro(y_true, y_pred) -> float:
     # True positives (correct predictions)
     TP = np.sum(y_true == y_pred)
 
+    # count how many true
+
     # False positives and false negatives
     FP = np.sum(y_true != y_pred)
+
+    # count how many false 
+    
     FN = FP   # for single-label multi-class
 
     denominator = 2*TP + FP + FN
