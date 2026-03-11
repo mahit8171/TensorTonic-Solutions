@@ -8,7 +8,7 @@ def expected_value_discrete(x, p):
     x = np.array(x )
     p = np.array(p )
 
-    if not np.isclose(np.sum(p), 1):
+    if not np.allclose(np.sum(p), 1):
         raise ValueError("Probabilities must sum to 1")
 
     return np.sum( x*p )
